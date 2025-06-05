@@ -6,7 +6,7 @@ import {faker} from "@faker-js/faker"
 export function createFactoryEventBody(): CreateEventData {
     return({
             name: faker.music.album(),
-            date: faker.date.future()
+            date: faker.date.soon()
         });
 }
 

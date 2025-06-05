@@ -9,8 +9,8 @@
     "dev": "ts-node-dev src/server.ts",
     "migration:run": "prisma migrate deploy",
     "seed": "prisma db seed",
-    "test": "jest",
-    "test:coverage": "jest --coverage --runInBand",
+    "test": "npm run test:load-envs -- jest -- --runInBand",
+    "test:coverage": "npm run test:load-envs -- jest -- --coverage --runInBand",
     "test:migration:run": "npm run test:load-envs prisma migrate deploy",
     "test:load-envs": "dotenv -e .env.test"
   },

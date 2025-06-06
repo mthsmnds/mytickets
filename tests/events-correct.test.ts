@@ -8,11 +8,12 @@ const api = supertest(app); //sobe o app e fornece api de acesso
 
 beforeEach(async()=>{
     await prisma.event.deleteMany();
+    await prisma.ticket.deleteMany();
 })
 afterAll(async()=>{
+    await prisma.ticket.deleteMany();
     await prisma.event.deleteMany();
 })
-
 describe("POST /events", ()=>{
     it("deve criar corretamente novo evento", async()=>{
         const data = createFactoryEventBody();

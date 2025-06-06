@@ -14,6 +14,7 @@ afterAll(async()=>{
     await prisma.ticket.deleteMany();
     await prisma.event.deleteMany();
 })
+
 describe("POST /events", ()=>{
     it("deve criar corretamente novo evento", async()=>{
         const data = createFactoryEventBody();

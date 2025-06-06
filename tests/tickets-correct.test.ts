@@ -1,9 +1,8 @@
 import prisma from "../src/database/index";
 import app from "../src/app";
 import supertest from "supertest";
-import {faker} from "@faker-js/faker"
-import { createFactoryMultTickets, createFactoryTicket, createFactoryTicketBody } from "./factories/ticket-factory";
-import { createFactoryEvent } from "./factories/event-factory";
+import { createFactoryMultTickets, createFactoryTicketBody } from "./factories/ticket-factory";
+
 
 const api = supertest(app); //sobe o app e fornece api de acesso
 
